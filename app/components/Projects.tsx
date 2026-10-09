@@ -4,62 +4,84 @@ type Project = {
   name: string
   description: string
   stack: string[]
-  code: string
+  /** Path to a screenshot in /public, for example '/projects/my-app.png' */
+  image?: string
+  code?: string
   demo?: string
 }
 
-const projects: Project[] = [
-  {
-    name: 'MOON Sound',
-    description:
-      'A music player with time-synced lyrics, live lyric translation, playlists and a karaoke mode. Available in Arabic and English.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    code: 'https://github.com/Mu21stafa23/Music-app',
-    demo: 'https://moonsound.vercel.app',
-  },
-  {
-    name: 'Saudization Calculator',
-    description:
-      'Works out how many Saudi hires a company needs to reach its Saudization target, per profession. Bilingual, with dark mode.',
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    code: 'https://github.com/Mu21stafa23/Calculating-localization-in-professions',
-    demo: 'https://cal-help.vercel.app',
-  },
-  {
-    name: 'E-Learning Platform UI',
-    description:
-      'A responsive front end for an online learning platform: landing page, about, contact and sign-in screens, with a dark mode toggle.',
-    stack: ['React', 'Vite', 'Tailwind CSS'],
-    code: 'https://github.com/Mu21stafa23/reactjs-tw-Elerning',
-  },
-]
+/* Add projects here. Each one becomes a card and replaces a "coming soon"
+   placeholder. Example:
+
+   {
+     name: 'My App',
+     description: 'One or two sentences about what it does.',
+     stack: ['Next.js', 'Tailwind CSS'],
+     image: '/projects/my-app.png',
+     code: 'https://github.com/Mu21stafa23/my-app',
+     demo: 'https://my-app.vercel.app',
+   },
+*/
+const projects: Project[] = []
+
+/* The grid always shows at least this many cards. */
+const MIN_CARDS = 3
 
 const linkClass =
-  'font-semibold text-hibiscus underline decoration-hibiscus/40 underline-offset-4 transition-colors hover:text-sand hover:decoration-sand'
+  'font-semibold text-mint underline decoration-mint/40 underline-offset-4 transition-colors hover:decoration-mint'
 
 export default function Projects() {
-  return (
-    <Section id="work" title="Work">
-      <ul className="divide-y divide-line border-b border-line">
-        {projects.map((project) => (
-          <li key={project.name} className="grid gap-4 py-8 first:pt-0 lg:grid-cols-3 lg:gap-10">
-            <div>
-              <h3 className="font-display text-3xl font-semibold leading-tight">{project.name}</h3>
-              <p className="mt-2 text-sm text-haze">{project.stack.join(', ')}</p>
-            </div>
+  const placeholders = Math.max(0, MIN_CARDS - projects.length)
 
-            <div className="lg:col-span-2">
-              <p className="max-w-xl text-lg leading-8 text-haze">{project.description}</p>
-              <div className="mt-4 flex gap-6">
+  return (
+    <Section
+      id="projects"
+      title="Projects"
+      intro={projects.length === 0 ? 'New projects are on the way.' : undefined}
+    >
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <li key={project.name} className="flex flex-col rounded-xl border border-line bg-panel p-5">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={`Screenshot of ${project.name}`}
+                className="h-40 w-full rounded-lg border border-line object-cover object-top"
+              />
+            ) : (
+              <div className="flex h-40 items-center justify-center rounded-lg border border-line bg-ink font-mono text-sm text-mute">
+                {project.name}
+              </div>
+            )}
+            <h3 className="mt-5 text-xl font-semibold">{project.name}</h3>
+            <p className="mt-2 leading-7 text-mute">{project.description}</p>
+            <p className="mt-4 font-mono text-xs text-mute">{project.stack.join(' / ')}</p>
+            {(project.demo || project.code) && (
+              <div className="mt-auto flex gap-6 pt-5">
                 {project.demo && (
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
                     Live demo
                   </a>
                 )}
-                <a href={project.code} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                  Source code
-                </a>
+                {project.code && (
+                  <a href={project.code} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                    Source code
+                  </a>
+                )}
               </div>
+            )}
+          </li>
+        ))}
+
+        {Array.from({ length: placeholders }, (_, index) => (
+          <li key={`placeholder-${index}`} className="rounded-xl border border-line bg-panel p-5">
+            <div className="flex h-40 items-center justify-center rounded-lg border border-dashed border-line font-mono text-sm text-mute">
+              coming soon
+            </div>
+            <div aria-hidden="true">
+              <div className="mt-5 h-4 w-2/3 rounded bg-line" />
+              <div className="mt-3 h-3 w-full rounded bg-line/60" />
+              <div className="mt-2 h-3 w-4/5 rounded bg-line/60" />
             </div>
           </li>
         ))}

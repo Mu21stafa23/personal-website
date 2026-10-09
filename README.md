@@ -6,26 +6,42 @@ My portfolio site: who I am, what I work with, a few projects, and how to reach 
 
 ## Sections
 
-- **Hero** — my name in English and Arabic, a one-line introduction, and my photo
-- **About** — what I do and how I work
-- **Skills** — languages, frameworks, tools and practices
-- **Work** — selected projects with links to the code and live demos
-- **Contact** — email, LinkedIn, GitHub and WhatsApp
+- **Hero** — name, role, photo and a code window with a quick profile
+- **About me** — a short introduction and key facts
+- **Skills** — web development, programming, tools and IT support
+- **Experience** — work history, education and certifications
+- **Projects** — project cards; shows "coming soon" placeholders until projects are added
+- **Contact** — email, LinkedIn and GitHub
+
+## Adding a project
+
+Open `app/components/Projects.tsx` and add an entry to the `projects` array. Each entry becomes a card and replaces one placeholder:
+
+```ts
+{
+  name: 'My App',
+  description: 'One or two sentences about what it does.',
+  stack: ['Next.js', 'Tailwind CSS'],
+  image: '/projects/my-app.png', // optional, a file in public/
+  code: 'https://github.com/Mu21stafa23/my-app',
+  demo: 'https://my-app.vercel.app',
+},
+```
 
 ## Design
 
-A dark theme with one accent color. The palette and fonts are defined once in `app/globals.css`:
+A dark, code-editor style theme. Colors and fonts are defined once in `app/globals.css`:
 
 | Token | Value | Used for |
 | :-- | :-- | :-- |
-| `night` | `#0d1021` | Page background |
-| `dusk` | `#151a30` | Contact section background |
-| `line` | `#2a3050` | Dividers and borders |
-| `sand` | `#f1eadb` | Main text |
-| `haze` | `#a0a8c2` | Secondary text |
-| `hibiscus` | `#f0527a` | Accent |
+| `ink` | `#0d1117` | Page background |
+| `panel` | `#161b22` | Cards and the code window |
+| `line` | `#30363d` | Borders and dividers |
+| `fg` | `#e6edf3` | Main text |
+| `mute` | `#8b949e` | Secondary text |
+| `mint` | `#34d399` | Accent |
 
-Headings use [Changa](https://fonts.google.com/specimen/Changa) and body text uses [Readex Pro](https://fonts.google.com/specimen/Readex+Pro). Both cover Latin and Arabic.
+Text uses [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk); code-style details use [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono).
 
 ## Built with
 
@@ -48,16 +64,17 @@ Then open [http://localhost:3000](http://localhost:3000).
 ```
 app/
 ├── components/
-│   ├── Navbar.tsx     # Top navigation and mobile menu
-│   ├── Hero.tsx
-│   ├── Section.tsx    # Shared layout for the sections below the hero
+│   ├── Navbar.tsx      # Top navigation and mobile menu
+│   ├── Hero.tsx        # Edit the `profile` array to change the code window
+│   ├── Section.tsx     # Shared layout for the sections below the hero
 │   ├── About.tsx
-│   ├── Skills.tsx     # Edit the `skillGroups` array
-│   ├── Projects.tsx   # Edit the `projects` array to add or remove work
-│   ├── Contact.tsx    # Contact links and footer
-│   └── icons.tsx      # Menu icons used by the navigation
-├── layout.tsx         # Page title, description and fonts
-├── page.tsx           # Puts the sections together
-└── globals.css        # Colors, fonts and the hero animation
-public/                # Images
+│   ├── Skills.tsx      # Edit the `skillGroups` array
+│   ├── Experience.tsx  # Jobs, education and certifications
+│   ├── Projects.tsx    # Edit the `projects` array
+│   ├── Contact.tsx     # Contact links and footer
+│   └── icons.tsx       # Menu icons used by the navigation
+├── layout.tsx          # Page title, description and fonts
+├── page.tsx            # Puts the sections together
+└── globals.css         # Colors and fonts
+public/                 # Images
 ```

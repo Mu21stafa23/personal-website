@@ -2,34 +2,43 @@ import Section from './Section'
 
 const skillGroups = [
   {
-    title: 'Languages',
-    items: ['JavaScript', 'TypeScript', 'HTML', 'CSS'],
+    title: 'Web development',
+    items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
   },
   {
-    title: 'Frameworks',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'React Router'],
+    title: 'Programming',
+    items: ['JavaScript', 'Java', 'C++', 'SQL basics'],
   },
   {
     title: 'Tools',
-    items: ['Git and GitHub', 'Vite', 'Vercel'],
+    items: ['Git', 'VS Code', 'Google Workspace', 'Microsoft Office'],
   },
   {
-    title: 'Practices',
-    items: ['Responsive design', 'Right-to-left and bilingual UI', 'Accessibility'],
+    title: 'IT support',
+    items: ['Hardware and software troubleshooting', 'Help desk', 'Windows', 'Linux'],
   },
 ]
 
 export default function Skills() {
   return (
     <Section id="skills" title="Skills">
-      <dl className="divide-y divide-line border-b border-line">
+      <div className="grid gap-6 sm:grid-cols-2">
         {skillGroups.map((group) => (
-          <div key={group.title} className="grid gap-2 py-6 first:pt-0 sm:grid-cols-4 sm:gap-6">
-            <dt className="text-haze">{group.title}</dt>
-            <dd className="text-xl leading-relaxed sm:col-span-3">{group.items.join(', ')}</dd>
+          <div key={group.title} className="rounded-xl border border-line bg-panel p-6">
+            <h3 className="text-lg font-semibold">{group.title}</h3>
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <li
+                  key={item}
+                  className="rounded-md border border-line bg-ink px-3 py-1.5 font-mono text-sm text-fg"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
-      </dl>
+      </div>
     </Section>
   )
 }

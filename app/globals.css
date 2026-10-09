@@ -2,71 +2,47 @@
 
 @theme inline {
   /* Palette */
-  --color-night: #0d1021; /* page background */
-  --color-dusk: #151a30; /* raised surfaces */
-  --color-line: #2a3050; /* hairlines and borders */
-  --color-sand: #f1eadb; /* main text */
-  --color-haze: #a0a8c2; /* secondary text */
-  --color-hibiscus: #f0527a; /* accent */
+  --color-ink: #0d1117; /* page background */
+  --color-panel: #161b22; /* cards and the code window */
+  --color-line: #30363d; /* borders and dividers */
+  --color-fg: #e6edf3; /* main text */
+  --color-mute: #8b949e; /* secondary text */
+  --color-mint: #34d399; /* accent */
 
-  /* Type: Changa for display, Readex Pro for reading. Both cover Latin and Arabic. */
-  --font-display: var(--font-changa), "Segoe UI", Tahoma, sans-serif;
-  --font-sans: var(--font-readex), "Segoe UI", Tahoma, sans-serif;
+  /* Code window syntax colors */
+  --color-syn-key: #ff7b72;
+  --color-syn-var: #79c0ff;
+  --color-syn-str: #a5d6ff;
+
+  /* Type */
+  --font-sans: var(--font-grotesk), "Segoe UI", Tahoma, sans-serif;
+  --font-mono: var(--font-jetbrains), Consolas, "Courier New", monospace;
 }
 
 html {
-  background: var(--color-night);
+  background: var(--color-ink);
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-night);
-  color: var(--color-sand);
+  background: var(--color-ink);
+  color: var(--color-fg);
   font-family: var(--font-sans);
 }
 
 ::selection {
-  background: var(--color-hibiscus);
-  color: var(--color-night);
+  background: var(--color-mint);
+  color: var(--color-ink);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-hibiscus);
+  outline: 2px solid var(--color-mint);
   outline-offset: 3px;
   border-radius: 4px;
-}
-
-/* The one piece of motion on the page: the two names arrive from the side
-   their script starts on. */
-@keyframes enter-from-left {
-  from {
-    opacity: 0;
-    transform: translateX(-2rem);
-  }
-}
-
-@keyframes enter-from-right {
-  from {
-    opacity: 0;
-    transform: translateX(2rem);
-  }
-}
-
-.enter-ltr {
-  animation: enter-from-left 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-.enter-rtl {
-  animation: enter-from-right 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .enter-ltr,
-  .enter-rtl {
-    animation: none;
   }
 }
