@@ -60,6 +60,7 @@ const projects: Project[] = [
       'Graduation project: a website for Cambridge International College Sudan with a page for each program, plus student and teacher screens for lectures, attendance and assignments, in Arabic and English. A team of three; I did the design and all the development.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     image: '/projects/college-website.jpg',
+    demo: 'https://cic-sudan-graduation-project.vercel.app',
   },
   {
     name: 'ECO Business Website',
