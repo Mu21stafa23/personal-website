@@ -31,6 +31,14 @@ const projects: Project[] = [
     demo: 'https://one-gate-website.vercel.app',
   },
   {
+    name: 'College Website and E-Learning',
+    description:
+      'Graduation project: a website for Cambridge International College Sudan with a page for each program, plus student and teacher screens for lectures, attendance and assignments, in Arabic and English. A team of three; I did the design and all the development.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    image: '/projects/college-website.jpg',
+    demo: 'https://cic-sudan-graduation-project.vercel.app',
+  },
+  {
     name: 'Moon Cafe',
     description:
       'Order-ahead system for a coffee shop, built as a demo. Customers scan a QR code from the parking area or a table, build a drink that is poured in 3D, and collect it at the car or the counter. Staff run a live orders board and the manager sees the day\'s sales. In Arabic and English.',
@@ -69,14 +77,6 @@ const projects: Project[] = [
     stack: ['React', 'Vite', 'Tailwind CSS', 'Chart.js'],
     image: '/projects/fleet-super-admin.jpg',
     demo: 'https://dash-os.netlify.app',
-  },
-  {
-    name: 'College Website and E-Learning',
-    description:
-      'Graduation project: a website for Cambridge International College Sudan with a page for each program, plus student and teacher screens for lectures, attendance and assignments, in Arabic and English. A team of three; I did the design and all the development.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    image: '/projects/college-website.jpg',
-    demo: 'https://cic-sudan-graduation-project.vercel.app',
   },
   {
     name: 'ECO Business Website',
