@@ -43,7 +43,12 @@ type Certification = {
 
 /* Ordered by how close each one is to front-end work. */
 const certifications: Certification[] = [
-  { name: 'React Basics', from: 'Meta, Coursera', date: 'Oct 2024' },
+  {
+    name: 'React Basics',
+    from: 'Meta, Coursera',
+    date: 'Oct 2024',
+    link: 'https://www.coursera.org/account/accomplishments/records/I3C08UKS4OSQ',
+  },
   {
     name: 'Share Data Through the Art of Visualization',
     from: 'Google, Coursera',
@@ -51,12 +56,32 @@ const certifications: Certification[] = [
     link: 'https://coursera.org/verify/YCA61SO1IHYY',
   },
   { name: 'Full Stack Web & Mobile Development', from: 'Afro-tech Training Center', date: '2021' },
-  { name: 'The Bits and Bytes of Computer Networking', from: 'Google, Coursera', date: 'Jan 2024' },
-  { name: 'Technical Support Fundamentals', from: 'Google, Coursera', date: 'Dec 2023' },
+  {
+    name: 'The Bits and Bytes of Computer Networking',
+    from: 'Google, Coursera',
+    date: 'Jan 2024',
+    link: 'https://www.coursera.org/account/accomplishments/records/T5BZEAT6F5UF',
+  },
+  {
+    name: 'Technical Support Fundamentals',
+    from: 'Google, Coursera',
+    date: 'Dec 2023',
+    link: 'https://www.coursera.org/account/accomplishments/verify/X3DTRCYXA8W6',
+  },
   { name: 'Engineering Technical Support', from: 'Afro-tech Training Center', date: '2022' },
   { name: 'Computer Maintenance', from: 'Afro-tech Training Center', date: '2022' },
-  { name: 'Advertising Foundations', from: 'LinkedIn Learning', date: 'Jul 2025' },
-  { name: 'Marketing on Facebook', from: 'LinkedIn Learning', date: 'Jul 2025' },
+  {
+    name: 'Advertising Foundations',
+    from: 'LinkedIn Learning',
+    date: 'Jul 2025',
+    link: 'https://www.linkedin.com/learning/certificates/3b0e31d7990336f9785cc1129b6b90435c0d028fbe1d34d85716189fa5475fb0/',
+  },
+  {
+    name: 'Marketing on Facebook',
+    from: 'LinkedIn Learning',
+    date: 'Jul 2025',
+    link: 'https://www.linkedin.com/learning/certificates/aee771baa6c83b8cd12baf4a020e741059217ec088e1bd6d8f58fceca14ecb1d/',
+  },
 ]
 
 export default function Experience() {
