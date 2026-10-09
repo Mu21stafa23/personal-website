@@ -39,6 +39,14 @@ const projects: Project[] = [
     demo: 'https://moon-cafe-one.vercel.app',
   },
   {
+    name: 'Safi, a CSV Cleaner for Arabic Data',
+    description:
+      'Cleans messy CSV files in the browser, with nothing uploaded. It repairs broken Arabic encoding, tidies Saudi mobile numbers, ID numbers, IBANs and Hijri dates, and finds repeated people even when a name is written in Arabic on one row and English on another. Every fix is a suggestion to accept or skip, with undo, a quality score and a printable report. In Arabic and English.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    image: '/projects/csv-cleaner.jpg',
+    demo: 'https://csv-cleaner-ar.vercel.app',
+  },
+  {
     name: 'Fleet Operations Dashboard',
     description:
       'Dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
