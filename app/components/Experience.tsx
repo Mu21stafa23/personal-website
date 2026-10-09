@@ -21,16 +21,6 @@ const jobs = [
       'Ran one-on-one and group tutoring sessions.',
     ],
   },
-  {
-    role: 'Technical Support Assistant',
-    place: 'Cambridge International College Sudan, Khartoum',
-    period: '2022 – 2023',
-    points: [
-      'Gave first-line technical support for hardware and software problems.',
-      'Installed, configured and maintained operating systems and essential applications.',
-      'Documented incidents, ran diagnostics and escalated issues that could not be resolved.',
-    ],
-  },
 ]
 
 type Certification = {
