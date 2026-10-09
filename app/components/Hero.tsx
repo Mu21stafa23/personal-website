@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { MenuIcon, CloseIcon } from './icons'
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -65,12 +65,14 @@ export default function Hero() {
               <div className="md:hidden">
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                  aria-expanded={mobileMenuOpen}
                   className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none"
                 >
                   {mobileMenuOpen ? (
-                    <XMarkIcon className="w-6 h-6" />
+                    <CloseIcon className="w-6 h-6" />
                   ) : (
-                    <Bars3Icon className="w-6 h-6" />
+                    <MenuIcon className="w-6 h-6" />
                   )}
                 </button>
               </div>

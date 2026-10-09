@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { MenuIcon, CloseIcon } from './icons'
 
 export default function Navbar() {
   const [navOpen, setNavOpen] = useState(false)
@@ -40,9 +40,9 @@ export default function Navbar() {
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none"
               >
                 {navOpen ? (
-                  <XMarkIcon className="w-6 h-6" />
+                  <CloseIcon className="w-6 h-6" />
                 ) : (
-                  <Bars3Icon className="w-6 h-6" />
+                  <MenuIcon className="w-6 h-6" />
                 )}
               </button>
             </div>

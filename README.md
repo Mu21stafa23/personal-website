@@ -1,40 +1,46 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mustafa Hamad ElAmin — Personal Website
 
-## Getting Started
+My portfolio site: who I am, what I work with, a few projects, and how to reach me.
 
-First, run the development server:
+![Homepage preview](./docs/preview.jpg)
+
+## Sections
+
+- **Hero** — name, role, and quick links (LinkedIn, GitHub, email, WhatsApp)
+- **About** — a short introduction and how I approach my work
+- **Skills** — languages, frameworks and tools I use
+- **Projects** — selected work with links to the code and live demos
+- **Contact** — ways to get in touch
+
+## Built with
+
+- [Next.js 16](https://nextjs.org) (App Router)
+- [React 19](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS 4](https://tailwindcss.com)
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# personal-website
->>>>>>> f581d24d6fe77e240cc520c20703c416938d7b15
+```
+app/
+├── components/
+│   ├── Hero.tsx       # Top section with navigation
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Projects.tsx   # Edit the `projects` array to add or remove work
+│   ├── Contact.tsx    # Contact links and footer
+│   └── icons.tsx      # Menu icons used by the navigation
+├── layout.tsx         # Page title, description and fonts
+├── page.tsx           # Puts the sections together
+└── globals.css
+public/                # Images
+```

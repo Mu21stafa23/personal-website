@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <section id="about" className="bg-gradient-to-b from-white to-gray-50 text-gray-900 py-28">
+    <section id="about" className="scroll-mt-16 bg-gradient-to-b from-white to-gray-50 text-gray-900 py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         
         {/* Header */}
