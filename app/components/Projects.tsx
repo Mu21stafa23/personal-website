@@ -10,7 +10,7 @@ const projects: Project[] = [
   {
     name: 'MOON Sound',
     description:
-      'A music player with time-synced lyrics, live lyric translation, playlists and a karaoke mode. Installable as a PWA, in Arabic and English.',
+      'A music player with time-synced lyrics, live lyric translation, playlists and a karaoke mode. Available in Arabic and English.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     code: 'https://github.com/Mu21stafa23/Music-app',
     demo: 'https://moonsound.vercel.app',
