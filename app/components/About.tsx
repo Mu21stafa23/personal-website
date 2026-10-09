@@ -25,9 +25,12 @@ export default function About() {
           </p>
           <p>
             Since 2023 I&apos;ve focused on front-end development: taking on freelance projects
-            and learning through courses along the way. Teaching and support work taught me to
-            explain technical things clearly and to track a problem down patiently, and I bring
-            both to the interfaces I build.
+            and learning through courses along the way. I also have experience cleaning and
+            organizing data.
+          </p>
+          <p>
+            Teaching and support work taught me to explain technical things clearly and to track
+            a problem down patiently, and I bring both to the interfaces I build.
           </p>
         </div>
 

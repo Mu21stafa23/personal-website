@@ -4,10 +4,15 @@ const skillGroups = [
   {
     title: 'Web development',
     items: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Bootstrap'],
+    wide: true,
   },
   {
     title: 'Programming',
     items: ['JavaScript', 'Java', 'C++', 'SQL basics'],
+  },
+  {
+    title: 'Data',
+    items: ['Data cleaning', 'Data organization', 'Data entry', 'Microsoft Excel'],
   },
   {
     title: 'Tools',
@@ -24,7 +29,10 @@ export default function Skills() {
     <Section id="skills" title="Skills">
       <div className="grid gap-6 sm:grid-cols-2">
         {skillGroups.map((group) => (
-          <div key={group.title} className="rounded-xl border border-line bg-panel p-6">
+          <div
+            key={group.title}
+            className={`rounded-xl border border-line bg-panel p-6 ${group.wide ? 'sm:col-span-2' : ''}`}
+          >
             <h3 className="text-lg font-semibold">{group.title}</h3>
             <ul className="mt-4 flex flex-wrap gap-2">
               {group.items.map((item) => (

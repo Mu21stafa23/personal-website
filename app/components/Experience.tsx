@@ -7,6 +7,7 @@ const jobs = [
     period: '2023 – Present',
     points: [
       'Take on freelance web projects, building responsive websites and web apps with React, Next.js and Tailwind CSS.',
+      'Built the company website for One Gate Group Sudan, with a dedicated sub-site for each of the group\'s sectors.',
       'Keep learning through courses and personal projects, most recently TypeScript and Next.js.',
     ],
   },

@@ -22,7 +22,15 @@ type Project = {
      demo: 'https://my-app.vercel.app',
    },
 */
-const projects: Project[] = []
+const projects: Project[] = [
+  {
+    name: 'One Gate Group',
+    description:
+      'Company website for One Gate Group Sudan. One site holds a dedicated sub-site for each of the group\'s sectors, including airport services, cold storage, fish export and hotel services, in English and Arabic.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    demo: 'https://one-gate-website.vercel.app',
+  },
+]
 
 /* The grid always shows at least this many cards. */
 const MIN_CARDS = 3
