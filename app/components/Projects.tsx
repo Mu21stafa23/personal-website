@@ -31,6 +31,14 @@ const projects: Project[] = [
     demo: 'https://one-gate-website.vercel.app',
   },
   {
+    name: 'Moon Cafe',
+    description:
+      'Order-ahead system for a coffee shop, built as a demo. Customers scan a QR code from the parking area or a table, build a drink that is poured in 3D, and collect it at the car or the counter. Staff run a live orders board and the manager sees the day\'s sales. In Arabic and English.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
+    image: '/projects/moon-cafe.jpg',
+    demo: 'https://moon-cafe-one.vercel.app',
+  },
+  {
     name: 'Fleet Operations Dashboard',
     description:
       'Dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
