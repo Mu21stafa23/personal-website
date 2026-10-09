@@ -24,7 +24,6 @@ Open `app/components/Projects.tsx` and add an entry to the `projects` array. Eac
   description: 'One or two sentences about what it does.',
   stack: ['Next.js', 'Tailwind CSS'],
   image: '/projects/my-app.png', // optional, a file in public/
-  code: 'https://github.com/Mu21stafa23/my-app',
   demo: 'https://my-app.vercel.app',
 },
 ```

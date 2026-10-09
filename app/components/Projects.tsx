@@ -6,7 +6,7 @@ type Project = {
   stack: string[]
   /** Path to a screenshot in /public, for example '/projects/my-app.png' */
   image?: string
-  code?: string
+  /** Link to the live project. The picture, the name and "Live demo" all open it. */
   demo?: string
 }
 
@@ -18,7 +18,6 @@ type Project = {
      description: 'One or two sentences about what it does.',
      stack: ['Next.js', 'Tailwind CSS'],
      image: '/projects/my-app.png',
-     code: 'https://github.com/Mu21stafa23/my-app',
      demo: 'https://my-app.vercel.app',
    },
 */
@@ -36,15 +35,8 @@ const projects: Project[] = [
     description:
       'Admin dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
+    image: '/projects/fleet-dashboard.jpg',
     demo: 'https://os-dsh-next.vercel.app',
-  },
-  {
-    name: 'MOON Sound',
-    description:
-      'A music player with time-synced lyrics, live lyric translation, playlists and a karaoke mode, in Arabic and English.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    demo: 'https://moonsound.vercel.app',
-    code: 'https://github.com/Mu21stafa23/Music-app',
   },
   {
     name: 'Saudization Calculator',
@@ -53,7 +45,6 @@ const projects: Project[] = [
     stack: ['HTML', 'CSS', 'JavaScript'],
     image: '/projects/saudization-calculator.jpg',
     demo: 'https://cal-help.vercel.app',
-    code: 'https://github.com/Mu21stafa23/Calculating-localization-in-professions',
   },
   {
     name: 'E-Learning Platform UI',
@@ -61,7 +52,6 @@ const projects: Project[] = [
       'A responsive front end for an online learning platform: landing page, about, contact and sign-in screens, with a dark mode toggle.',
     stack: ['React', 'Vite', 'Tailwind CSS'],
     demo: 'https://elerning-platform-reactjs-tw.netlify.app',
-    code: 'https://github.com/Mu21stafa23/reactjs-tw-Elerning',
   },
 ]
 
@@ -85,7 +75,7 @@ export default function Projects() {
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => {
           /* Clicking the picture or the name opens the project. */
-          const href = project.demo ?? project.code
+          const href = project.demo
           const picture = project.image ? (
             <img
               src={project.image}
@@ -128,18 +118,11 @@ export default function Projects() {
               </h3>
               <p className="mt-2 leading-7 text-mute">{project.description}</p>
               <p className="mt-4 font-mono text-xs text-mute">{project.stack.join(' / ')}</p>
-              {(project.demo || project.code) && (
-                <div className="mt-auto flex gap-6 pt-5">
-                  {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                      Live demo
-                    </a>
-                  )}
-                  {project.code && (
-                    <a href={project.code} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                      Source code
-                    </a>
-                  )}
+              {project.demo && (
+                <div className="mt-auto pt-5">
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                    Live demo
+                  </a>
                 </div>
               )}
             </li>
