@@ -8,7 +8,7 @@ const jobs = [
     points: [
       'Take on freelance web projects, building responsive websites and web apps with React, Next.js and Tailwind CSS.',
       'Built the company website for One Gate Group Sudan, with a dedicated sub-site for each of the group\'s sectors.',
-      'Keep learning through courses and personal projects, most recently TypeScript and Next.js.',
+      'Keep learning through courses and personal projects, including React Basics from Meta and Google courses in data visualization and networking.',
     ],
   },
   {
@@ -33,11 +33,30 @@ const jobs = [
   },
 ]
 
-const certifications = [
-  { name: 'Google IT Support Fundamentals', from: 'Coursera', year: '2023' },
-  { name: 'Engineering Technical Support', from: 'Afro-tech Training Center', year: '2022' },
-  { name: 'Computer Maintenance', from: 'Afro-tech Training Center', year: '2022' },
-  { name: 'Full Stack Web & Mobile Development', from: 'Afro-tech Training Center', year: '2021' },
+type Certification = {
+  name: string
+  from: string
+  date: string
+  /** Link to the certificate, shown as "Verify" */
+  link?: string
+}
+
+/* Ordered by how close each one is to front-end work. */
+const certifications: Certification[] = [
+  { name: 'React Basics', from: 'Meta, Coursera', date: 'Oct 2024' },
+  {
+    name: 'Share Data Through the Art of Visualization',
+    from: 'Google, Coursera',
+    date: 'Sep 2024',
+    link: 'https://coursera.org/verify/YCA61SO1IHYY',
+  },
+  { name: 'Full Stack Web & Mobile Development', from: 'Afro-tech Training Center', date: '2021' },
+  { name: 'The Bits and Bytes of Computer Networking', from: 'Google, Coursera', date: 'Jan 2024' },
+  { name: 'Technical Support Fundamentals', from: 'Google, Coursera', date: 'Dec 2023' },
+  { name: 'Engineering Technical Support', from: 'Afro-tech Training Center', date: '2022' },
+  { name: 'Computer Maintenance', from: 'Afro-tech Training Center', date: '2022' },
+  { name: 'Advertising Foundations', from: 'LinkedIn Learning', date: 'Jul 2025' },
+  { name: 'Marketing on Facebook', from: 'LinkedIn Learning', date: 'Jul 2025' },
 ]
 
 export default function Experience() {
@@ -64,7 +83,7 @@ export default function Experience() {
       </ol>
 
       <div className="mt-16 grid gap-6 lg:grid-cols-3">
-        <div className="rounded-xl border border-line bg-panel p-6">
+        <div className="h-fit rounded-xl border border-line bg-panel p-6">
           <h3 className="text-lg font-semibold">Education</h3>
           <p className="mt-4 font-mono text-sm text-mint">2022</p>
           <p className="mt-1 font-medium">Bachelor of Information Technology</p>
@@ -75,10 +94,25 @@ export default function Experience() {
           <h3 className="text-lg font-semibold">Certifications</h3>
           <ul className="mt-4 divide-y divide-line">
             {certifications.map((cert) => (
-              <li key={cert.name} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 first:pt-0 last:pb-0">
-                <span className="font-medium">{cert.name}</span>
+              <li
+                key={cert.name}
+                className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 first:pt-0 last:pb-0"
+              >
+                <span className="font-medium">
+                  {cert.name}
+                  {cert.link && (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-3 text-sm font-normal text-mint underline decoration-mint/40 underline-offset-4 hover:decoration-mint"
+                    >
+                      Verify
+                    </a>
+                  )}
+                </span>
                 <span className="text-sm text-mute">
-                  {cert.from}, <span className="font-mono text-mint">{cert.year}</span>
+                  {cert.from}, <span className="font-mono text-mint">{cert.date}</span>
                 </span>
               </li>
             ))}

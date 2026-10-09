@@ -12,7 +12,7 @@ const skillGroups = [
   },
   {
     title: 'Data',
-    items: ['Data cleaning', 'Data organization', 'Data entry', 'Microsoft Excel'],
+    items: ['Data cleaning', 'Data organization', 'Data visualization', 'Data entry', 'Microsoft Excel'],
   },
   {
     title: 'Tools',
@@ -20,7 +20,7 @@ const skillGroups = [
   },
   {
     title: 'IT support',
-    items: ['Hardware and software troubleshooting', 'Help desk', 'Windows', 'Linux'],
+    items: ['Hardware and software troubleshooting', 'Help desk', 'Networking', 'Windows', 'Linux'],
   },
 ]
 
