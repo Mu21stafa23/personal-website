@@ -55,6 +55,14 @@ const projects: Project[] = [
     demo: 'https://cal-help.vercel.app',
     code: 'https://github.com/Mu21stafa23/Calculating-localization-in-professions',
   },
+  {
+    name: 'E-Learning Platform UI',
+    description:
+      'A responsive front end for an online learning platform: landing page, about, contact and sign-in screens, with a dark mode toggle.',
+    stack: ['React', 'Vite', 'Tailwind CSS'],
+    demo: 'https://elerning-platform-reactjs-tw.netlify.app',
+    code: 'https://github.com/Mu21stafa23/reactjs-tw-Elerning',
+  },
 ]
 
 /* Cards per row on wide screens. Empty spots in the last row are filled
