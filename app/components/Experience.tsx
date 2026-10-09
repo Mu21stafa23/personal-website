@@ -21,6 +21,16 @@ const jobs = [
       'Ran one-on-one and group tutoring sessions.',
     ],
   },
+  {
+    role: 'Teaching Assistant, Computer Labs',
+    place: 'Bahri Ahlia College, Khartoum North',
+    period: '2022 – 2023',
+    points: [
+      'Taught the computer labs and practical sessions, from programming to networking and simulation.',
+      'Supported students during lab work and helped them troubleshoot errors in their code and setups.',
+      'Ran one-on-one and group tutoring sessions.',
+    ],
+  },
 ]
 
 type Certification = {
