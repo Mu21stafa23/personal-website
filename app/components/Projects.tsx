@@ -33,10 +33,34 @@ const projects: Project[] = [
   {
     name: 'Fleet Operations Dashboard',
     description:
-      'Admin dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
+      'Dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
     image: '/projects/fleet-dashboard.jpg',
     demo: 'https://os-dsh-next.vercel.app',
+  },
+  {
+    name: 'Mall Management Dashboard',
+    description:
+      'Control panel for running a shopping mall: shops and rentals, permits, violations, wallet and payments, events and offers, maintenance, security and reports.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Recharts'],
+    image: '/projects/mall-dashboard.jpg',
+    demo: 'https://dash-m.netlify.app',
+  },
+  {
+    name: 'Fleet Super Admin Panel',
+    description:
+      'The super admin side of the fleet platform: vehicle and branch management, users and permissions, reports, operation logs and system settings, with language and theme switching.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Chart.js'],
+    image: '/projects/fleet-super-admin.jpg',
+    demo: 'https://dash-os.netlify.app',
+  },
+  {
+    name: 'ECO Business Website',
+    description:
+      'A landing page for a business services company, with sections for consulting, development and marketing services.',
+    stack: ['React', 'Tailwind CSS'],
+    image: '/projects/eco-landing.jpg',
+    demo: 'https://componey-reactjs.netlify.app',
   },
   {
     name: 'Saudization Calculator',
@@ -51,6 +75,7 @@ const projects: Project[] = [
     description:
       'A responsive front end for an online learning platform: landing page, about, contact and sign-in screens, with a dark mode toggle.',
     stack: ['React', 'Vite', 'Tailwind CSS'],
+    image: '/projects/e-learning.jpg',
     demo: 'https://elerning-platform-reactjs-tw.netlify.app',
   },
 ]
