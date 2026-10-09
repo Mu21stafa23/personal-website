@@ -95,12 +95,12 @@ const projects: Project[] = [
     demo: 'https://cal-help.vercel.app',
   },
   {
-    name: 'E-Learning Platform UI',
+    name: 'Darsi, an Online Course Platform',
     description:
-      'A responsive front end for an online learning platform: landing page, about, contact and sign-in screens, with a dark mode toggle.',
-    stack: ['React', 'Vite', 'Tailwind CSS'],
+      'A course platform front end you can use end to end: search nine courses, open one to see its plan week by week, enroll, tick lessons off and come back to find your place. Filters live in the address bar, forms have real validation, and progress is saved in the browser. With dark mode.',
+    stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/e-learning.jpg',
-    demo: 'https://elerning-platform-reactjs-tw.netlify.app',
+    demo: 'https://darsi-courses.vercel.app',
   },
 ]
 
