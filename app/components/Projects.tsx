@@ -31,16 +31,42 @@ const projects: Project[] = [
     image: '/projects/one-gate-group.jpg',
     demo: 'https://one-gate-website.vercel.app',
   },
+  {
+    name: 'Fleet Operations Dashboard',
+    description:
+      'Admin dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
+    demo: 'https://os-dsh-next.vercel.app',
+  },
+  {
+    name: 'MOON Sound',
+    description:
+      'A music player with time-synced lyrics, live lyric translation, playlists and a karaoke mode, in Arabic and English.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    demo: 'https://moonsound.vercel.app',
+    code: 'https://github.com/Mu21stafa23/Music-app',
+  },
+  {
+    name: 'Saudization Calculator',
+    description:
+      'Works out how many Saudi hires a company needs to reach its Saudization target, per profession. Bilingual, with light and dark themes.',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    image: '/projects/saudization-calculator.jpg',
+    demo: 'https://cal-help.vercel.app',
+    code: 'https://github.com/Mu21stafa23/Calculating-localization-in-professions',
+  },
 ]
 
-/* The grid always shows at least this many cards. */
-const MIN_CARDS = 3
+/* Cards per row on wide screens. Empty spots in the last row are filled
+   with "coming soon" placeholders. */
+const PER_ROW = 3
 
 const linkClass =
   'font-semibold text-mint underline decoration-mint/40 underline-offset-4 transition-colors hover:decoration-mint'
 
 export default function Projects() {
-  const placeholders = Math.max(0, MIN_CARDS - projects.length)
+  const placeholders =
+    projects.length === 0 ? PER_ROW : (PER_ROW - (projects.length % PER_ROW)) % PER_ROW
 
   return (
     <Section

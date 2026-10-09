@@ -12,10 +12,26 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const title = "Mustafa Hamad ElAmin | Front-End Developer";
+const description =
+  "Front-end developer building fast, responsive web apps with React, Next.js and Tailwind CSS, in English and Arabic.";
+
 export const metadata: Metadata = {
-  title: "Mustafa Hamad ElAmin | Front-End Developer",
-  description:
-    "Front-end developer building fast, responsive web apps with React, Next.js and Tailwind CSS, in English and Arabic.",
+  title,
+  description,
+  // The picture shown when the site's link is shared (WhatsApp, LinkedIn, X).
+  openGraph: {
+    title,
+    description,
+    type: "website",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Mustafa Hamad ElAmin, front-end developer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og.jpg"],
+  },
 };
 
 export default function RootLayout({

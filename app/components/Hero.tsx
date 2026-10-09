@@ -35,6 +35,10 @@ export default function Hero() {
             Mustafa Hamad ElAmin
           </h1>
           <p className="mt-4 text-2xl font-medium text-mute">Front-end developer</p>
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1.5 text-sm">
+            <span aria-hidden="true" className="h-2 w-2 rounded-full bg-mint" />
+            Available for freelance projects
+          </p>
           <p className="mt-6 max-w-md text-lg leading-8 text-mute">
             I build fast, responsive web apps with React, Next.js and Tailwind CSS, in English
             and Arabic.

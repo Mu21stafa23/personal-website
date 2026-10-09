@@ -8,9 +8,10 @@ My portfolio site: who I am, what I work with, a few projects, and how to reach 
 
 - **Hero** — name, role, photo and a code window with a quick profile
 - **About me** — a short introduction and key facts
+- **What I do** — the kinds of work I take on
 - **Skills** — web development, programming, tools and IT support
 - **Experience** — work history, education and certifications
-- **Projects** — project cards; shows "coming soon" placeholders until projects are added
+- **Projects** — project cards; empty spots in the last row show "coming soon" placeholders
 - **Contact** — email, LinkedIn and GitHub
 
 ## Adding a project
@@ -68,6 +69,7 @@ app/
 │   ├── Hero.tsx        # Edit the `profile` array to change the code window
 │   ├── Section.tsx     # Shared layout for the sections below the hero
 │   ├── About.tsx
+│   ├── Services.tsx    # The "What I do" cards
 │   ├── Skills.tsx      # Edit the `skillGroups` array
 │   ├── Experience.tsx  # Jobs, education and certifications
 │   ├── Projects.tsx    # Edit the `projects` array
@@ -76,5 +78,5 @@ app/
 ├── layout.tsx          # Page title, description and fonts
 ├── page.tsx            # Puts the sections together
 └── globals.css         # Colors and fonts
-public/                 # Images
+public/                 # Photo, project screenshots and og.jpg (the link preview image)
 ```
