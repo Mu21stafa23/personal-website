@@ -4,6 +4,7 @@ const email = 'Mu21stafa23@gmail.com'
 const profile: { key: string; value: string | string[] }[] = [
   { key: 'name', value: 'Mustafa Hamad ElAmin' },
   { key: 'role', value: 'Front-end developer' },
+  { key: 'location', value: 'Saudi Arabia' },
   { key: 'stack', value: ['React', 'Next.js', 'TypeScript'] },
   { key: 'styling', value: 'Tailwind CSS' },
   { key: 'languages', value: ['Arabic', 'English'] },

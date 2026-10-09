@@ -2,6 +2,15 @@ import Section from './Section'
 
 const jobs = [
   {
+    role: 'Freelance Front-End Developer',
+    place: 'Self-employed, Saudi Arabia',
+    period: '2023 – Present',
+    points: [
+      'Take on freelance web projects, building responsive websites and web apps with React, Next.js and Tailwind CSS.',
+      'Keep learning through courses and personal projects, most recently TypeScript and Next.js.',
+    ],
+  },
+  {
     role: 'Teaching Assistant, IT Department',
     place: 'Cambridge International College Sudan, Khartoum',
     period: '2022 – 2023',
