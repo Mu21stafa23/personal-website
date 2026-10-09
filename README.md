@@ -1,40 +1,83 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mustafa Hamad ElAmin — Personal Website
 
-## Getting Started
+My portfolio site: who I am, what I work with, a few projects, and how to reach me.
 
-First, run the development server:
+**Live site:** https://mustafa-hamad-portfolio.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Homepage preview](./docs/preview.jpg)
+
+## Sections
+
+- **Hero** — name, role, photo and a code window with a quick profile
+- **About me** — a short introduction and key facts
+- **What I do** — the kinds of work I take on
+- **Skills** — web development, programming, tools and IT support
+- **Experience** — work history, education and certifications
+- **Projects** — project cards; empty spots in the last row show "coming soon" placeholders
+- **Contact** — email, LinkedIn and GitHub
+
+## Adding a project
+
+Open `app/components/Projects.tsx` and add an entry to the `projects` array. Each entry becomes a card and replaces one placeholder:
+
+```ts
+{
+  name: 'My App',
+  description: 'One or two sentences about what it does.',
+  stack: ['Next.js', 'Tailwind CSS'],
+  image: '/projects/my-app.png', // optional, a file in public/
+  demo: 'https://my-app.vercel.app',
+},
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Design
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A dark, code-editor style theme. Colors and fonts are defined once in `app/globals.css`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Token | Value | Used for |
+| :-- | :-- | :-- |
+| `ink` | `#0d1117` | Page background |
+| `panel` | `#161b22` | Cards and the code window |
+| `line` | `#30363d` | Borders and dividers |
+| `fg` | `#e6edf3` | Main text |
+| `mute` | `#8b949e` | Secondary text |
+| `mint` | `#34d399` | Accent |
 
-## Learn More
+Text uses [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk); code-style details use [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono).
 
-To learn more about Next.js, take a look at the following resources:
+## Built with
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js 16](https://nextjs.org) (App Router)
+- [React 19](https://react.dev)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS 4](https://tailwindcss.com)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Run it locally
 
-## Deploy on Vercel
+```bash
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Then open [http://localhost:3000](http://localhost:3000).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# personal-website
->>>>>>> f581d24d6fe77e240cc520c20703c416938d7b15
+## Project structure
+
+```
+app/
+├── components/
+│   ├── Navbar.tsx      # Top navigation and mobile menu
+│   ├── Hero.tsx        # Edit the `profile` array to change the code window
+│   ├── Section.tsx     # Shared layout for the sections below the hero
+│   ├── About.tsx
+│   ├── Services.tsx    # The "What I do" cards
+│   ├── Skills.tsx      # Edit the `skillGroups` array
+│   ├── Experience.tsx  # Jobs, education and certifications
+│   ├── Projects.tsx    # Edit the `projects` array
+│   ├── Contact.tsx     # Contact links and footer
+│   └── icons.tsx       # Menu icons used by the navigation
+├── layout.tsx          # Page title, description and fonts
+├── page.tsx            # Puts the sections together
+└── globals.css         # Colors and fonts
+public/                 # Photo, project screenshots and og.jpg (the link preview image)
+```
