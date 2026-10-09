@@ -74,13 +74,13 @@ const certifications: Certification[] = [
     name: 'Advertising Foundations',
     from: 'LinkedIn Learning',
     date: 'Jul 2025',
-    link: 'https://www.linkedin.com/learning/certificates/3b0e31d7990336f9785cc1129b6b90435c0d028fbe1d34d85716189fa5475fb0/',
+    link: 'https://www.linkedin.com/learning/certificates/aee771baa6c83b8cd12baf4a020e741059217ec088e1bd6d8f58fceca14ecb1d/',
   },
   {
     name: 'Marketing on Facebook',
     from: 'LinkedIn Learning',
     date: 'Jul 2025',
-    link: 'https://www.linkedin.com/learning/certificates/aee771baa6c83b8cd12baf4a020e741059217ec088e1bd6d8f58fceca14ecb1d/',
+    link: 'https://www.linkedin.com/learning/certificates/3b0e31d7990336f9785cc1129b6b90435c0d028fbe1d34d85716189fa5475fb0/',
   },
 ]
 
