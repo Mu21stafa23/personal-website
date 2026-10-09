@@ -1,26 +1,72 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Palette */
+  --color-night: #0d1021; /* page background */
+  --color-dusk: #151a30; /* raised surfaces */
+  --color-line: #2a3050; /* hairlines and borders */
+  --color-sand: #f1eadb; /* main text */
+  --color-haze: #a0a8c2; /* secondary text */
+  --color-hibiscus: #f0527a; /* accent */
+
+  /* Type: Changa for display, Readex Pro for reading. Both cover Latin and Arabic. */
+  --font-display: var(--font-changa), "Segoe UI", Tahoma, sans-serif;
+  --font-sans: var(--font-readex), "Segoe UI", Tahoma, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-night);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-night);
+  color: var(--color-sand);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-hibiscus);
+  color: var(--color-night);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-hibiscus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* The one piece of motion on the page: the two names arrive from the side
+   their script starts on. */
+@keyframes enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+}
+
+@keyframes enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+}
+
+.enter-ltr {
+  animation: enter-from-left 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.enter-rtl {
+  animation: enter-from-right 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .enter-ltr,
+  .enter-rtl {
+    animation: none;
+  }
 }

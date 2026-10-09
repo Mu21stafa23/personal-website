@@ -1,3 +1,5 @@
+import Section from './Section'
+
 type Project = {
   name: string
   description: string
@@ -32,69 +34,36 @@ const projects: Project[] = [
   },
 ]
 
+const linkClass =
+  'font-semibold text-hibiscus underline decoration-hibiscus/40 underline-offset-4 transition-colors hover:text-sand hover:decoration-sand'
+
 export default function Projects() {
   return (
-    <section id="portfolio" className="scroll-mt-16 bg-white text-gray-900 py-28">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <p className="text-md font-semibold uppercase tracking-[0.25em] text-green-700/95">
-            Projects
-          </p>
-          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Things I&apos;ve built
-          </h2>
-          <div className="w-16 h-1 bg-green-700/95 mx-auto mt-6 rounded-full"></div>
-        </div>
+    <Section id="work" title="Work">
+      <ul className="divide-y divide-line border-b border-line">
+        {projects.map((project) => (
+          <li key={project.name} className="grid gap-4 py-8 first:pt-0 lg:grid-cols-3 lg:gap-10">
+            <div>
+              <h3 className="font-display text-3xl font-semibold leading-tight">{project.name}</h3>
+              <p className="mt-2 text-sm text-haze">{project.stack.join(', ')}</p>
+            </div>
 
-        {/* Cards */}
-        <div className="grid gap-8 md:grid-cols-3">
-          {projects.map((project, index) => (
-            <article
-              key={project.name}
-              className="flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition"
-            >
-              <p className="text-sm font-semibold tracking-[0.2em] text-green-700/95">
-                {String(index + 1).padStart(2, '0')}
-              </p>
-              <h3 className="mt-3 text-xl font-semibold">{project.name}</h3>
-              <p className="mt-3 text-gray-600 leading-relaxed">{project.description}</p>
-
-              <ul className="mt-6 flex flex-wrap gap-2">
-                {project.stack.map((tech) => (
-                  <li
-                    key={tech}
-                    className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
-                  >
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-auto flex gap-3 pt-8">
+            <div className="lg:col-span-2">
+              <p className="max-w-xl text-lg leading-8 text-haze">{project.description}</p>
+              <div className="mt-4 flex gap-6">
                 {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-green-700/95 hover:bg-green-800 text-white text-sm font-semibold rounded-lg transition"
-                  >
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
                     Live demo
                   </a>
                 )}
-                <a
-                  href={project.code}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 border border-gray-300 hover:border-green-700 hover:text-green-700 text-gray-700 text-sm font-semibold rounded-lg transition"
-                >
-                  View code
+                <a href={project.code} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                  Source code
                 </a>
               </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </Section>
   )
 }

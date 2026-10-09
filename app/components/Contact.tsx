@@ -1,5 +1,6 @@
+const email = 'Mu21stafa23@gmail.com'
+
 const links = [
-  { label: 'Email me', href: 'mailto:Mu21stafa23@gmail.com', primary: true },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mustafa-elamin-688b24171/' },
   { label: 'GitHub', href: 'https://github.com/Mu21stafa23' },
   { label: 'WhatsApp', href: 'https://wa.me/+971509711552' },
@@ -8,43 +9,43 @@ const links = [
 export default function Contact() {
   return (
     <>
-      <section id="contact" className="scroll-mt-16 bg-green-800 text-white py-28">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8 text-center">
-          <p className="text-md font-semibold uppercase tracking-[0.25em] text-green-200">
-            Contact
-          </p>
-          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
-            Let&apos;s build something together
+      <section id="contact" className="scroll-mt-16 border-t border-line bg-dusk py-24 md:py-32">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 className="max-w-3xl font-display text-4xl font-semibold leading-tight md:text-5xl md:leading-tight">
+            Have a project or a role in mind? Write to me.
           </h2>
-          <div className="w-16 h-1 bg-white/80 mx-auto mt-6 rounded-full"></div>
 
-          <p className="mt-8 text-lg leading-8 text-green-50">
-            Have a project in mind, or a role you think I&apos;d fit? Send me a message and
-            I&apos;ll get back to you.
-          </p>
+          <a
+            href={`mailto:${email}`}
+            className="mt-10 inline-block break-all font-display text-[clamp(1.5rem,5vw,3.25rem)] font-bold leading-tight text-hibiscus underline decoration-hibiscus/40 underline-offset-8 transition-colors hover:text-sand hover:decoration-sand"
+          >
+            {email}
+          </a>
 
-          <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+          <ul className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
             {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith('mailto:') ? undefined : '_blank'}
-                rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                className={
-                  link.primary
-                    ? 'px-8 py-3 bg-white text-green-800 hover:bg-green-50 font-bold rounded-lg transition shadow-lg'
-                    : 'px-8 py-3 border border-white/60 hover:bg-white/10 text-white font-bold rounded-lg transition'
-                }
-              >
-                {link.label}
-              </a>
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-sand underline decoration-line underline-offset-4 transition-colors hover:decoration-sand"
+                >
+                  {link.label}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
-      <footer className="bg-green-950 text-green-100/80 py-6 text-center text-sm">
-        © {new Date().getFullYear()} Mustafa Hamad ElAmin
+      <footer className="border-t border-line py-8">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 text-sm text-haze lg:px-8">
+          <p>© {new Date().getFullYear()} Mustafa Hamad ElAmin</p>
+          <p lang="ar" dir="rtl">
+            مصطفى حمد الأمين
+          </p>
+        </div>
       </footer>
     </>
   )

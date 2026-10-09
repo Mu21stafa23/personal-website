@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Changa, Readex_Pro } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const changa = Changa({
+  variable: "--font-changa",
+  subsets: ["latin", "arabic"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const readexPro = Readex_Pro({
+  variable: "--font-readex",
+  subsets: ["latin", "arabic"],
 });
 
 export const metadata: Metadata = {
   title: "Mustafa Hamad ElAmin | Front-End Developer",
   description:
-    "Front-end developer building fast, responsive web apps with React, Next.js and Tailwind CSS.",
+    "Front-end developer building fast, responsive web interfaces in English and Arabic with React, Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({
@@ -24,10 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
-    >
+    <html lang="en" className={`${changa.variable} ${readexPro.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
