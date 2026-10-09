@@ -12,12 +12,13 @@ const jobs = [
     ],
   },
   {
-    role: 'Teaching Assistant, Computer Labs',
+    role: 'Teaching Assistant, IT Department',
     place: 'Bahri Ahlia College, Khartoum North',
     period: '2023 – Present',
     points: [
+      'Assist in delivering IT courses, including programming and computer fundamentals.',
       'Teach the computer labs and practical sessions, from programming to networking and simulation.',
-      'Support students during lab work and help them troubleshoot errors in their code and setups.',
+      'Support students in the labs and help them troubleshoot errors in their code and setups.',
       'Run one-on-one and group tutoring sessions.',
     ],
   },
@@ -27,7 +28,9 @@ const jobs = [
     period: '2022 – 2023',
     points: [
       'Assisted in delivering IT courses, including programming and computer fundamentals.',
-      'Supported students in practical labs and helped them troubleshoot errors in their code.',
+      'Taught the computer labs and practical sessions, from programming to networking and simulation.',
+      'Installed and set up the software the labs needed, and looked after the lab computers myself.',
+      'Supported students in the labs and helped them troubleshoot errors in their code and setups.',
       'Ran one-on-one and group tutoring sessions.',
     ],
   },
