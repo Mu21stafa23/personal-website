@@ -95,12 +95,12 @@ const projects: Project[] = [
     demo: 'https://cal-help.vercel.app',
   },
   {
-    name: 'Darsi, an Online Course Platform',
+    name: 'Moon Academy, an Online Course Platform',
     description:
       'A course platform front end you can use end to end: search nine courses, open one to see its plan week by week, enroll, tick lessons off and come back to find your place. Filters live in the address bar, forms have real validation, and progress is saved in the browser. With dark mode.',
     stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/e-learning.jpg',
-    demo: 'https://darsi-courses.vercel.app',
+    demo: 'https://moon-academy-courses.vercel.app',
   },
 ]
 
