@@ -29,7 +29,7 @@ const jobs = [
     points: [
       'Assisted in delivering IT courses, including programming and computer fundamentals.',
       'Taught the computer labs and practical sessions, from programming to networking and simulation.',
-      'Installed and set up the software the labs needed, and looked after the lab computers myself.',
+      'Handled the installation and setup of the software the labs needed myself.',
       'Supported students in the labs and helped them troubleshoot errors in their code and setups.',
       'Ran one-on-one and group tutoring sessions.',
     ],
