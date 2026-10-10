@@ -81,12 +81,12 @@ const projects: Project[] = [
     demo: 'https://dash-os.netlify.app',
   },
   {
-    name: 'ECO Business Website',
+    name: 'Moon Orbit, a Company Website',
     description:
-      'A landing page for a business services company, with sections for consulting, development and marketing services.',
-    stack: ['React', 'Tailwind CSS'],
-    image: '/projects/eco-landing.jpg',
-    demo: 'https://componey-reactjs.netlify.app',
+      'A company website for a business services firm, built as a demo: what the company does, its three services with what the client receives, its numbers, its offices and a contact form that checks each field. In English and Arabic.',
+    stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
+    image: '/projects/moon-orbit.jpg',
+    demo: 'https://moon-orbit-sa.vercel.app',
   },
   {
     name: 'Saudization Calculator',
