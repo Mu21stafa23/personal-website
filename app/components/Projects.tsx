@@ -8,6 +8,8 @@ type Project = {
   image?: string
   /** Link to the live project. The picture, the name and "Live demo" all open it. */
   demo?: string
+  /** What the link is called when "Live demo" does not fit, such as a page a program is downloaded from. */
+  linkLabel?: string
 }
 
 /* Add projects here. Each one becomes a card and replaces a "coming soon"
@@ -102,6 +104,15 @@ const projects: Project[] = [
     image: '/projects/e-learning.jpg',
     demo: 'https://moon-academy-courses.vercel.app',
   },
+  {
+    name: 'Mail Viewer',
+    description:
+      'A Windows program that opens old Outlook backups (PST, OST, MSG, EML and MBOX) without Outlook, an account or internet. It shows folders and messages in an Outlook-style window, searches archives of 50 GB and more with filters like from:, has:pdf and after:2023, in English and Arabic, and saves or extracts attachments. Files are opened read-only and nothing leaves the computer.',
+    stack: ['Python', 'SQLite', 'JavaScript'],
+    image: '/projects/mail-viewer.jpg',
+    demo: 'https://mail-viewer-beta.vercel.app',
+    linkLabel: 'Website and download',
+  },
 ]
 
 /* Cards per row on wide screens. Empty spots in the last row are filled
@@ -170,7 +181,7 @@ export default function Projects() {
               {project.demo && (
                 <div className="mt-auto pt-5">
                   <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                    Live demo
+                    {project.linkLabel ?? 'Live demo'}
                   </a>
                 </div>
               )}
