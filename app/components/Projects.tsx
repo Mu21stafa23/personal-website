@@ -59,7 +59,7 @@ const projects: Project[] = [
   {
     name: 'Moon Talween, Coloring Pages Ready to Print',
     description:
-      'Coloring pages for children, made to fit the paper: one sheet, two a sheet, or a folded book with the child\'s name on the cover, for printers that print on both sides or one. 58 original drawings, Arabic and English letters, mandalas for older children, and pages made on request such as mazes, color by number and tracing, plus cards, masks and certificates. The page layout, the booklet order and the PDF file are written from scratch and run in the browser. In Arabic and English.',
+      'Coloring pages for children, made to fit the paper: one sheet, two a sheet, or a folded book with the child\'s name on the cover, for printers that print on both sides or one. 52 original drawings, Arabic and English letters, mandalas for older children, and pages made on request such as mazes, color by number and tracing, plus cards, masks and certificates. The page layout, the booklet order and the PDF file are written from scratch and run in the browser. In Arabic and English.',
     stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/moon-talween.jpg',
     demo: 'https://moon-talween.vercel.app',
