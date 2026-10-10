@@ -81,12 +81,12 @@ const projects: Project[] = [
     demo: 'https://dash-os.netlify.app',
   },
   {
-    name: 'ECO Business Website',
+    name: 'Moon Studio, a Studio Website with a Price Estimator',
     description:
-      'A landing page for a business services company, with sections for consulting, development and marketing services.',
-    stack: ['React', 'Tailwind CSS'],
-    image: '/projects/eco-landing.jpg',
-    demo: 'https://componey-reactjs.netlify.app',
+      'A bilingual website for a digital studio where the visitor prices the project before any call: pick services and options and an estimate adds up with a price range and a timeline. The estimate lives in the address bar, so it can be shared by link, printed, or sent with a contact request. With filterable case studies in Arabic and English.',
+    stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
+    image: '/projects/moon-studio.jpg',
+    demo: 'https://moon-studio-sa.vercel.app',
   },
   {
     name: 'Saudization Calculator',
