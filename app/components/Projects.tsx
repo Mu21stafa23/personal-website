@@ -10,6 +10,8 @@ type Project = {
   demo?: string
   /** What the link is called when "Live demo" does not fit, such as a page a program is downloaded from. */
   linkLabel?: string
+  /** Link to the source code, shown next to the demo link. */
+  source?: string
 }
 
 /* Add projects here. Each one becomes a card and replaces a "coming soon"
@@ -24,6 +26,15 @@ type Project = {
    },
 */
 const projects: Project[] = [
+  {
+    name: 'Maalam, Addresses for Khartoum',
+    description:
+      'Most streets in Khartoum have no name and most houses no number, so couriers find people by phone. Maalam is a public API that gives every house a permanent short code and directions in Arabic and English built from nearby landmarks, opens it in Google Maps and prints a proof of address with a QR check. Companies sign up for API keys with rate limits and usage stats, and each address earns a confidence score as couriers confirm real deliveries. Includes a satellite map with search across streets, neighborhoods and landmarks, and 122 automated tests.',
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'MapLibre', 'Docker'],
+    image: '/projects/maalam.jpg',
+    demo: 'https://maalam-api.onrender.com',
+    source: 'https://github.com/Mu21stafa23/maalam-api',
+  },
   {
     name: 'One Gate Group',
     description:
@@ -186,11 +197,18 @@ export default function Projects() {
               </h3>
               <p className="mt-2 leading-7 text-mute">{project.description}</p>
               <p className="mt-4 font-mono text-xs text-mute">{project.stack.join(' / ')}</p>
-              {project.demo && (
-                <div className="mt-auto pt-5">
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                    {project.linkLabel ?? 'Live demo'}
-                  </a>
+              {(project.demo || project.source) && (
+                <div className="mt-auto flex flex-wrap gap-x-6 gap-y-2 pt-5">
+                  {project.demo && (
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                      {project.linkLabel ?? 'Live demo'}
+                    </a>
+                  )}
+                  {project.source && (
+                    <a href={project.source} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                      Source code
+                    </a>
+                  )}
                 </div>
               )}
             </li>
