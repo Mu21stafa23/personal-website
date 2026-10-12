@@ -3,9 +3,9 @@ const email = 'Mu21stafa23@gmail.com'
 /* The lines shown in the code window. Edit these to change what it says. */
 const profile: { key: string; value: string | string[] }[] = [
   { key: 'name', value: 'Mustafa Hamad ElAmin' },
-  { key: 'role', value: 'Front-end developer' },
+  { key: 'role', value: 'Full-stack developer' },
   { key: 'location', value: 'Saudi Arabia' },
-  { key: 'stack', value: ['React', 'Next.js', 'TypeScript'] },
+  { key: 'stack', value: ['React', 'Next.js', 'TypeScript', 'Python', 'PostgreSQL'] },
   { key: 'styling', value: 'Tailwind CSS' },
   { key: 'languages', value: ['Arabic', 'English'] },
   { key: 'focus', value: 'Clean, fast interfaces' },
@@ -34,14 +34,14 @@ export default function Hero() {
           <h1 className="mt-8 text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
             Mustafa Hamad ElAmin
           </h1>
-          <p className="mt-4 text-2xl font-medium text-mute">Front-end developer</p>
+          <p className="mt-4 text-2xl font-medium text-mute">Full-stack developer</p>
           <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1.5 text-sm">
             <span aria-hidden="true" className="h-2 w-2 rounded-full bg-mint" />
             Available for freelance projects
           </p>
           <p className="mt-6 max-w-md text-lg leading-8 text-mute">
-            I build fast, responsive web apps with React, Next.js and Tailwind CSS, in English
-            and Arabic.
+            I build fast, responsive web apps with React, Next.js and Tailwind CSS, and the APIs
+            behind them with Python, FastAPI and PostgreSQL, in English and Arabic.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
