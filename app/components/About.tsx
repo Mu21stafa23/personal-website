@@ -14,8 +14,9 @@ export default function About() {
       <div className="grid gap-10 lg:grid-cols-3 lg:gap-16">
         <div className="space-y-5 text-lg leading-8 text-mute lg:col-span-2">
           <p className="text-xl leading-8 text-fg">
-            I&apos;m a front-end developer based in Saudi Arabia. I build responsive websites and
-            web apps with React, Next.js and Tailwind CSS.
+            I&apos;m a full-stack developer based in Saudi Arabia. I build responsive websites and
+            web apps with React, Next.js and Tailwind CSS, and the APIs and databases behind them
+            with Python, FastAPI and PostgreSQL.
           </p>
           <p>
             I started in IT. After my degree I worked as a teaching assistant and a technical
@@ -24,7 +25,7 @@ export default function About() {
             running.
           </p>
           <p>
-            Since 2023 I&apos;ve focused on front-end development: taking on freelance projects
+            Since 2023 I&apos;ve focused on web development: taking on freelance projects
             and learning through courses along the way. I also have experience cleaning and
             organizing data.
           </p>

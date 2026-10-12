@@ -12,9 +12,9 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
-const title = "Mustafa Hamad ElAmin | Front-End Developer";
+const title = "Mustafa Hamad ElAmin | Full-Stack Developer";
 const description =
-  "Front-end developer building fast, responsive web apps with React, Next.js and Tailwind CSS, in English and Arabic.";
+  "Full-stack developer building fast, responsive web apps with React, Next.js and Tailwind CSS, and APIs with Python, FastAPI and PostgreSQL, in English and Arabic.";
 
 export const metadata: Metadata = {
   title,
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Mustafa Hamad ElAmin, front-end developer" }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Mustafa Hamad ElAmin, full-stack developer" }],
   },
   twitter: {
     card: "summary_large_image",

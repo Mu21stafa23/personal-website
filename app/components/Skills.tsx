@@ -7,8 +7,13 @@ const skillGroups = [
     wide: true,
   },
   {
+    title: 'Back end and APIs',
+    items: ['Python', 'FastAPI', 'REST APIs', 'PostgreSQL', 'PostGIS', 'Docker', 'GitHub Actions'],
+    wide: true,
+  },
+  {
     title: 'Programming',
-    items: ['JavaScript', 'Java', 'C++', 'SQL basics'],
+    items: ['JavaScript', 'Python', 'Java', 'C++', 'SQL'],
   },
   {
     title: 'Data',
