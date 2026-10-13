@@ -27,11 +27,11 @@ type Project = {
 */
 const projects: Project[] = [
   {
-    name: 'Maalam, Addresses for Khartoum',
+    name: 'Makanak (مكانك), Addresses for Sudan',
     description:
-      'Most streets in Khartoum have no name and most houses no number, so couriers find people by phone. Maalam is a public API that gives every house a permanent short code and directions in Arabic and English built from nearby landmarks, opens it in Google Maps and prints a proof of address with a QR check. Companies sign up for API keys with rate limits and usage stats, and each address earns a confidence score as couriers confirm real deliveries. Includes a satellite map with search across streets, neighborhoods and landmarks, and 122 automated tests.',
+      'Most streets in Khartoum have no name and most houses no number, so couriers find people by phone. Makanak is a public API, with a phone app, that gives every house a permanent short code and directions in Arabic and English built from nearby landmarks, opens it in Google Maps and prints a proof of address with a QR check. Companies sign up for API keys with rate limits and usage stats, and each address earns a confidence score as couriers confirm real deliveries. Includes a satellite map with search across streets, neighborhoods and landmarks, and 122 automated tests.',
     stack: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'MapLibre', 'Docker'],
-    image: '/projects/maalam.jpg',
+    image: '/projects/makanak.jpg',
     demo: 'https://maalam-api.onrender.com',
     source: 'https://github.com/Mu21stafa23/maalam-api',
   },
