@@ -41,7 +41,7 @@ const projects: Project[] = [
       'Company website for One Gate Group Sudan. One site holds a dedicated sub-site for each of the group\'s sectors, including airport services, cold storage, fish export and hotel services, in English and Arabic.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     image: '/projects/one-gate-group.jpg',
-    demo: 'https://one-gate-website.vercel.app',
+    demo: 'https://onegate.mustafahamad.site',
   },
   {
     name: 'College Website and E-Learning',
