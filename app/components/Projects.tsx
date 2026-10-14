@@ -32,7 +32,7 @@ const projects: Project[] = [
       'Management system for small clinics that runs on one computer inside the clinic, with no internet: every other computer, tablet or phone opens it in the browser over the clinic network. Reception registers patients with checks that stop duplicate files, issues queue numbers per doctor, takes cash, bank-app and deferred payments (including transfers held while the bank is down), prints invoices on A5 or thermal paper, books appointments with WhatsApp reminders and closes each shift with a report. Patient addresses follow Sudan\'s states, localities, neighborhoods and villages. Daily backups to a flash drive, one-click install on Windows, in Arabic.',
     stack: ['Python', 'Django', 'SQLite', 'JavaScript'],
     image: '/projects/moon-clinic.jpg',
-    demo: 'https://moon-clinic.onrender.com',
+    demo: 'https://clinic.mustafahamad.site',
   },
   {
     name: 'Makanak (مكانك), Addresses for Sudan',
