@@ -49,7 +49,7 @@ const projects: Project[] = [
       'Graduation project: a website for Cambridge International College Sudan with a page for each program, plus student and teacher screens for lectures, attendance and assignments, in Arabic and English. A team of three; I did the design and all the development.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     image: '/projects/college-website.jpg',
-    demo: 'https://cic-sudan-graduation-project.vercel.app',
+    demo: 'https://college.mustafahamad.site',
   },
   {
     name: 'Moon Cafe',
@@ -57,7 +57,7 @@ const projects: Project[] = [
       'Order-ahead system for a coffee shop, built as a demo. Customers scan a QR code from the parking area or a table, build a drink that is poured in 3D, and collect it at the car or the counter. Staff run a live orders board and the manager sees the day\'s sales. In Arabic and English.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL'],
     image: '/projects/moon-cafe.jpg',
-    demo: 'https://moon-cafe-one.vercel.app',
+    demo: 'https://cafe.mustafahamad.site',
   },
   {
     name: 'Moon Safi, a Data Cleaner for Arabic Files',
@@ -65,7 +65,7 @@ const projects: Project[] = [
       'Cleans messy CSV and Excel files in the browser, with nothing uploaded. It repairs broken Arabic encoding, tidies Saudi mobile numbers, ID numbers, IBANs and Hijri dates, and finds repeated people even when a name is in Arabic on one row and English on another. Every fix is a suggestion to accept or skip, with undo and a quality score. Steps can be saved as a recipe, shared by link and replayed on the next file; two files can be compared row by row. In Arabic and English.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     image: '/projects/csv-cleaner.jpg',
-    demo: 'https://moon-safi.vercel.app',
+    demo: 'https://safi.mustafahamad.site',
   },
   {
     name: 'Moon Talween, Coloring Pages Ready to Print',
@@ -73,7 +73,7 @@ const projects: Project[] = [
       'Coloring pages for children, made to fit the paper: one sheet, two a sheet, or a folded book with the child\'s name on the cover, for printers that print on both sides or one. 52 original drawings, Arabic and English letters, mandalas for older children, and pages made on request such as mazes, color by number and tracing, plus cards, masks and certificates. The page layout, the booklet order and the PDF file are written from scratch and run in the browser. In Arabic and English.',
     stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/moon-talween.jpg',
-    demo: 'https://moon-talween.vercel.app',
+    demo: 'https://talween.mustafahamad.site',
   },
   {
     name: 'Fleet Operations Dashboard',
@@ -81,7 +81,7 @@ const projects: Project[] = [
       'Dashboard for a vehicle operations and tracking platform. It covers vehicles, fuel and battery records, maintenance schedules, route planning on a map, staff, branches and budgets, with a separate view for each role.',
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Leaflet'],
     image: '/projects/fleet-dashboard.jpg',
-    demo: 'https://os-dsh-next.vercel.app',
+    demo: 'https://fleet.mustafahamad.site',
   },
   {
     name: 'Mall Management Dashboard',
@@ -105,7 +105,7 @@ const projects: Project[] = [
       'A company website for a business services firm, built as a demo: what the company does, its three services with what the client receives, its numbers, its offices and a contact form that checks each field. In English and Arabic.',
     stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/moon-orbit.jpg',
-    demo: 'https://moon-orbit-sa.vercel.app',
+    demo: 'https://orbit.mustafahamad.site',
   },
   {
     name: 'Saudization Calculator',
@@ -121,7 +121,7 @@ const projects: Project[] = [
       'A course platform front end you can use end to end: search nine courses, open one to see its plan week by week, enroll, tick lessons off and come back to find your place. Filters live in the address bar, forms have real validation, and progress is saved in the browser. With dark mode.',
     stack: ['React', 'Vite', 'React Router', 'Tailwind CSS'],
     image: '/projects/e-learning.jpg',
-    demo: 'https://moon-academy-courses.vercel.app',
+    demo: 'https://academy.mustafahamad.site',
   },
   {
     name: 'Mail Viewer',
@@ -129,7 +129,7 @@ const projects: Project[] = [
       'A Windows program that opens old Outlook backups (PST, OST, MSG, EML and MBOX) without Outlook, an account or internet. It shows folders and messages in an Outlook-style window, searches archives of 50 GB and more with filters like from:, has:pdf and after:2023, in English and Arabic, and saves or extracts attachments. Files are opened read-only and nothing leaves the computer.',
     stack: ['Python', 'SQLite', 'JavaScript'],
     image: '/projects/mail-viewer.jpg',
-    demo: 'https://mail-viewer-beta.vercel.app',
+    demo: 'https://mail.mustafahamad.site',
     linkLabel: 'Website and download',
   },
 ]
