@@ -27,6 +27,14 @@ type Project = {
 */
 const projects: Project[] = [
   {
+    name: 'Moon Clinic, a Clinic System for Sudan',
+    description:
+      'Management system for small clinics that runs on one computer inside the clinic, with no internet: every other computer, tablet or phone opens it in the browser over the clinic network. Reception registers patients with checks that stop duplicate files, issues queue numbers per doctor, takes cash, bank-app and deferred payments (including transfers held while the bank is down), prints invoices on A5 or thermal paper, books appointments with WhatsApp reminders and closes each shift with a report. Patient addresses follow Sudan\'s states, localities, neighborhoods and villages. Daily backups to a flash drive, one-click install on Windows, in Arabic.',
+    stack: ['Python', 'Django', 'SQLite', 'JavaScript'],
+    image: '/projects/moon-clinic.jpg',
+    demo: 'https://clinic.mustafahamad.site',
+  },
+  {
     name: 'Makanak (مكانك), Addresses for Sudan',
     description:
       'Most streets in Khartoum have no name and most houses no number, so couriers find people by phone. Makanak is a public API, with a phone app, that gives every house a permanent short code and directions in Arabic and English built from nearby landmarks, opens it in Google Maps and prints a proof of address with a QR check. Companies sign up for API keys with rate limits and usage stats, and each address earns a confidence score as couriers confirm real deliveries. Includes a satellite map with search across streets, neighborhoods and landmarks, and 122 automated tests.',
